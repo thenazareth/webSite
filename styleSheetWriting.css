@@ -1,0 +1,166 @@
+/*this css file defines font styles and text layouts for the portfolio sections*/
+
+.sectionTitle {
+    font-family: 'merriweather', serif;
+    font-size: 2em;
+    color: #4B44C0;
+}
+
+.sectionSubTitle {
+    margin-left: 10px;
+    font-family: 'merriweather', serif;
+    font-size: 1.5em;
+    color: #4B44C0;
+}
+
+.sectionTitle::after {
+    content: "";
+    display: block;
+    width: 130%;
+    margin-left: 0;
+    height: 2px;
+    background: #4B44C0;
+}
+
+.descriptionText {
+    font-family: 'recursive', sans-serif;
+    font-weight: lighter;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #1E1E1E;
+}
+
+#welcome-text .sectionSubTitle{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#welcome-text .descriptionText {
+    text-align: center;
+}
+
+#objective-section .profile, .about-me-text {
+    width: 50%;
+}
+
+#objective-section .descriptionText, .sectionTitle {
+    text-align: justify;
+    padding: 10px;
+}
+
+
+#experience-section .sectionHeader .sectionTitle::after {
+    margin-right: 0;   
+    margin-left: -30%;
+}
+
+#skills-section .sectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#skills-section .sectionHeader .sectionTitle::after {
+    margin-right: 30%;
+    margin-left: -30%;
+    width: 160%;      
+}
+
+#courses-section .courses-list {
+  display: flex;
+  flex-direction: row; 
+  gap: 15px; 
+  width: 100%;
+}
+
+#courses-section .course-item {
+  display:flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  background-color: #F5F5F5;
+  gap: 10px;
+  
+}
+
+.course-header {
+    text-align: left;
+}
+
+.course-body {
+    flex-grow: 1;
+}
+
+.course-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 0.8em;
+    text-align: right;
+}
+
+
+#contact-section .sectionTitle::after {
+  content: none;
+}
+
+#contact-section .sectionTitle::before {
+  content: "";
+  display: block;
+  margin-right: 30%;
+  margin-left: -30%;
+  width: 160%;
+  height: 2px; 
+  background: #4B44C0;
+}
+
+footer .sectionContent .descriptionText{
+    font-size: 0.6em;
+}
+
+footer .descriptionText, 
+footer .sectionTitle{
+    color:#F5F5F5
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.icon-botao {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.botao{
+    width: 70px;
+    background-color: #F5F5F5;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#profile{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#profile img {
+    width: 373px;
+    height: 472px;
+}
+
+#curriculum img{
+    width: 389px;
+    height: 309px;
+    border-radius: 40px;
+}
+
+#high-school .sectionSubTitle{
+    font-size: 1em;
+}

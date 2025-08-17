@@ -1,0 +1,18 @@
+#experience-section .list-item:hover {
+    background-color: #9b97e5;
+}
+
+a{
+    text-decoration: none;
+    color: #1E1E1E;
+}
+
+.botao:hover{
+    background-color: #9b97e5;
+}
+
+/*dark-mode */
+body.dark-mode #experience-section .list-item:hover,
+body.dark-mode .botao:hover {
+    background-color: #4B44C0;
+}
