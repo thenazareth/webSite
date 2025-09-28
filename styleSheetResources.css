@@ -13,6 +13,13 @@ a{
 
 /*dark-mode */
 body.dark-mode #experience-section .list-item:hover,
-body.dark-mode .botao:hover {
+body.dark-mode .botao:hover,
+body.dark-mode #languageDropdown:hover {
     background-color: #4B44C0;
+}
+
+body.dark-mode #languageDropdown {
+    background-color: #121212;
+    color: #f5f5f5;
+    font-family: 'Merriweather', serif;
 }

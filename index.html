@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="styleSheetWriting.css">
         <link rel="stylesheet" href="styleSheetResources.css">
         <link rel="stylesheet" href="styleSheetScript.css">
+        <link rel="stylesheet" href="styleSheetLanguage.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
@@ -30,16 +31,21 @@
                     <button class="botao descriptionText">
                         BLOG
                     </button>
-                    <button class="icon-botao", id="darkModeToggle">
-                        <img class="icon", id="darkModeIcon" src="./imagens/Sun.svg" alt="modo">
+                    <button class="icon-botao" id="darkModeToggle">
+                        <img class="icon" id="darkModeIcon" src="./imagens/Sun.svg" alt="modo">
                     </button>
-                    <button class="icon-botao">
-                        <img class="icon" id="languageIcon" src="./imagens/Globe.svg" alt="linguagem">
-                    </button>
+                    <div class="language-selector">
+                        <img class="icon" id="languageIcon" src="./imagens/Globe.svg" alt="Idioma">
+                        <select id="languageDropdown">
+                            <option value="pt">Português</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+
                 </div> 
                 <div id="welcome-text">
-                    <p class="sectionSubTitle">Olá, seja muito bem-vindo(a) ao meu portifólio profissional!</p>
-                    <p class="descriptionText">Aqui você encontra um resumo da minha jornada acadêmica, experiências 
+                    <p class="sectionSubTitle" id="wellcome-title">Olá, seja muito bem-vindo(a) ao meu portifólio profissional!</p>
+                    <p class="descriptionText" id="wellcome-description">Aqui você encontra um resumo da minha jornada acadêmica, experiências 
                         e projetos dentro e fora do mundo universitário. Fique à vontade para 
                         explorar!</p>
                 </div>
@@ -52,11 +58,11 @@
                     </div>
                     <div id="about-me-text">
                         <div class="sectionHeader">
-                            <p class="descriptionText">Me chamo</p>
+                            <p class="descriptionText" id="about-intro">Me chamo</p>
                             <h2 class="sectionSubTitle">Vitória Nazareth,</h2>
                         </div>
                         <div class="sectionContent">
-                            <p class="descriptionText">Sou estudante de Bacharelado em Ciência da Computação na UFRJ, com base 
+                            <p class="descriptionText" id="about-description">Sou estudante de Bacharelado em Ciência da Computação na UFRJ, com base 
                             sólida em desenvolvimento de software, estruturas de dados e programação. 
                             Participante ativa de projetos acadêmicos e grupos de estudo, com interesse
                             em backend, ciência de dados e tecnologia acessível. Busco minha primeira 
@@ -69,41 +75,41 @@
             <!--Educação-->
             <section id="education-section">
                     <div class="sectionHeader">
-                        <h2 class="sectionTitle">Educação</h2>
+                        <h2 class="sectionTitle" id="education-title">Educação</h2>
                     </div>
                     <div class="pageContent">
                         <div class="sectionContent">
                             <div class='education', id="undergraduate">
-                                <h3 class="sectionSubTitle">Universidade Federal do Rio de Janeiro - UFRJ</h3>
+                                <h3 class="sectionSubTitle" id="education-ufrj">Universidade Federal do Rio de Janeiro - UFRJ</h3>
                                 <div class="descriptionText">
                                     <div class="info-container">
                                         <img src="./imagens/course.svg" class="courseIcon" alt="curso de graduação">
-                                        <p class="descriptionText">Bacharelado em Ciência da Computação</p>
+                                        <p class="descriptionText" id="education-degree">Bacharelado em Ciência da Computação</p>
                                     </div>
                                     <div class="info-container">
                                         <img src="./imagens/semester.svg" class='semesterIcon' alt="semestre">
-                                        <p class="descriptionText">Décimo período</p>
+                                        <p class="descriptionText" id="education-semester">Décimo período</p>
                                     </div>
                                     <div class="info-container">
                                         <img src="./imagens/Calendar.svg" class="calendarIcon" alt="previsão de formação">
-                                        <p class="descriptionText">Formação para 2026.1</p>
+                                        <p class="descriptionText" id="education-graduation">Formação para 2026.1</p>
                                     </div>
                                 </div>
                         </div>
                         <div class="education", id="high-school">
-                            <h3 class="sectionSubTitle">Centro Federal de Educação Tecnológica Celso Suckow da Fonseca - CEFET</h3>
+                            <h3 class="sectionSubTitle" id="education-cefet">Centro Federal de Educação Tecnológica Celso Suckow da Fonseca - CEFET</h3>
                             <div class="descriptionText">
                                 <div class="info-container">
                                 <img src="./imagens/course.svg" class='courseIcon' alt="curso de graduação">
-                                <p>Técnico em Eletrônica</p>
+                                <p id="education-cefet-degree">Técnico em Eletrônica</p>
                                 </div>
                                 <div class="info-container">
                                     <img src="./imagens/semester.svg" class="semesterIcon" alt="semestre">
-                                    <p>Completo</p>
+                                    <p id="education-cefet-semester">Completo</p>
                                 </div>
                                 <div class="info-container">
                                     <img src="./imagens/Calendar.svg" class="calendarIcon" alt="previsão de formação">
-                                    <p>Formada desde 2020</p>
+                                    <p id="education-cefet-graduation">Formada desde 2020</p>
                                 </div>
                             </div>
                         </div>
@@ -113,46 +119,46 @@
             <!--Experiência Profissional-->
             <section id="experience-section">
                 <div class="sectionHeader">
-                        <h2 class="sectionTitle">Experiência Profissional</h2>
+                        <h2 class="sectionTitle" id="experience-title">Experiência Profissional</h2>
                 </div>
                 <div class="pageContent">
                     <div class="sectionContent">
                             <div class="list-row">
                                 <div class="list-item" data-desc="desc1">
-                                    <h3 class="sectionSubTitle">Sokrates.AI</h3>
+                                    <h3 class="sectionSubTitle" id="exp1">Sokrates.AI</h3>
                                 </div>
                                 <div class="list-item" data-desc="desc2">
-                                    <h3 class='sectionSubTitle'>Estúdio Urutau</h3>
+                                    <h3 class='sectionSubTitle' id="exp2">Estúdio Urutau</h3>
                                 </div>   
                             </div>
                            <div class="list-row">
                                 <div class="list-item" data-desc="desc3">
-                                    <h3 class="sectionSubTitle">GDP UFRJ</h3>
+                                    <h3 class="sectionSubTitle" id="exp3">GDP UFRJ</h3>
                                 </div>
                                 <div class="list-item" data-desc="desc4">
-                                    <h3 class='sectionSubTitle'>Lab 3D UFRJ</h3>
+                                    <h3 class='sectionSubTitle' id="exp4">Lab 3D UFRJ</h3>
                                 </div>
                            </div>
                            <div class="list-row">
                                 <div class="list-item" data-desc="desc5">
-                                    <h3 class="sectionSubTitle">ProMOVE UFRJ</h3>
+                                    <h3 class="sectionSubTitle" id="exp5">ProMOVE UFRJ</h3>
                                 </div>
                                 <div class="list-item" data-desc="desc6">
-                                    <h3 class='sectionSubTitle'>LDSC UFRJ</h3>
+                                    <h3 class='sectionSubTitle' id="exp6">LDSC UFRJ</h3>
                                 </div>
                            </div>
                     </div>
                     <div id="information-text">
                         <div class='desc-container'>
                             <div class='desc-header'>
-                                <h3 class='sectionSubTitle'>Cargo</h3>
+                                <h3 class='sectionSubTitle' id="job-title">Cargo</h3>
                             </div>
                             <div class='desc-text'>
-                                <p class='descriptionText'>Clique em uma experiência para ver a descrição!</p>
+                                <p class='descriptionText' id="job-description">Clique em uma experiência para ver a descrição!</p>
                             </div>
                             <div class='desc-footer'>
                                 <img src="./imagens/semester.svg" class='semesterIcon' alt="tempo">
-                                <p class="descriptionText">Período de atuação</p>
+                                <p class="descriptionText" id="job-time">Período de atuação</p>
                             </div>
                         </div>
                     </div>
@@ -161,66 +167,66 @@
             <!--Competências-->
             <section id="skills-section">
                 <div class="sectionHeader">
-                    <h2 class="sectionTitle">Cursos & Competências</h2>
+                    <h2 class="sectionTitle" id="courses-title">Cursos & Competências</h2>
                 </div>
-                <div class="pageContent", id="courses">
+                <div class="pageContent" id="courses">
                     <div class="sectionContent">
                         <div class="list-row">
                             <div class="list-item">
                                 <div class="skill-title">
-                                    <h3 class="sectionSubTitle">Pacote Office</h3>
+                                    <h3 class="sectionSubTitle" id="course-office">Pacote Office</h3>
                                 </div>
                                 <div class='skill-text'>
-                                    <p class="descriptionText">Pacote Office 2010, Microsoft Word, Excel avançado, PowerPoint e Access.</p>
+                                    <p class="descriptionText" id="office-description">Pacote Office 2010, Microsoft Word, Excel avançado, PowerPoint e Access.</p>
                                 </div>
                                 <div class="skill-footer">
                                     <img src="./imagens/semester.svg" class="semesterIcon" alt="horas">
-                                    <p class="descriptionText">96h</p>
+                                    <p class="descriptionText" id="office-hours">96h</p>
                                     <img src="./imagens/unit.svg" class="unitIcon" alt="unidade">
-                                    <p class="descriptionText">EasyComp</p>
+                                    <p class="descriptionText" id="office-institution">EasyComp</p>
                                 </div>
                             </div>
                             <div class="list-item">
                                 <div class="skill-title">
-                                    <h3 class="sectionSubTitle">Lógica de Programação</h3>
+                                    <h3 class="sectionSubTitle" id="course-logic">Lógica de Programação</h3>
                                 </div>
                                 <div class='skill-text'>
-                                    <p class="descriptionText">Lógica de programação com Python. Curso ministrado pelo Laboratório de Informática 
+                                    <p class="descriptionText" id="logic-description">Lógica de programação com Python. Curso ministrado pelo Laboratório de Informática 
                                     para Educação, LIpE, grupo de Extensão da UFRJ.</p>
                                 </div>
                                 <div class="skill-footer">
                                     <img src="./imagens/semester.svg" class="semesterIcon" alt="horas">
-                                    <p class="descriptionText">80h</p>
+                                    <p class="descriptionText" id="logic-hours">80h</p>
                                     <img src="./imagens/unit.svg" class="unitIcon" alt="unidade">
-                                    <p class="descriptionText">UFRJ</p>
+                                    <p class="descriptionText" id="logic-institution">UFRJ</p>
                                 </div>
                             </div>
                             <div class="list-item">
                                 <div class="skill-title">
-                                    <h3 class="sectionSubTitle">Análise de Dados</h3>
+                                    <h3 class="sectionSubTitle" id="course-data">Análise de Dados</h3>
                                 </div>
                                 <div class='skill-text'>
-                                    <p class="descriptionText">Curso de fundamentos para Análise de Dados com Python.</p>
+                                    <p class="descriptionText" id="data-description">Curso de fundamentos para Análise de Dados com Python.</p>
                                 </div>
                                 <div class="skill-footer">
                                     <img src="./imagens/semester.svg" class="semesterIcon" alt="horas">
-                                    <p class="descriptionText">60h</p>
+                                    <p class="descriptionText" id="data-hours">60h</p>
                                     <img src="./imagens/unit.svg" class="unitIcon" alt="unidade">
-                                    <p class="descriptionText">Data Science Academy</p>
+                                    <p class="descriptionText" id="data-institution">Data Science Academy</p>
                                 </div>
                             </div>
                             <div class="list-item">
                                 <div class="skill-title">
-                                    <h3 class="sectionSubTitle">Data Science</h3>
+                                    <h3 class="sectionSubTitle" id="course-boot">Data Science</h3>
                                 </div>
                                 <div class='skill-text'>
-                                    <p class="descriptionText">Boot Camp de Data Science da Visagio</p>
+                                    <p class="descriptionText" id="boot-description">Boot Camp de Data Science da Visagio</p>
                                 </div>
                                 <div class="skill-footer">
                                     <img src="./imagens/semester.svg" class="semesterIcon" alt="horas">
-                                    <p class="descriptionText">80h</p>
+                                    <p class="descriptionText" id="boot-hours">80h</p>
                                     <img src="./imagens/unit.svg" class="unitIcon" alt="unidade">
-                                    <p class="descriptionText">VAI Academy</p>
+                                    <p class="descriptionText" id="boot-institution">VAI Academy</p>
                                 </div>
                             </div>
                         </div>
@@ -234,31 +240,31 @@
                         </div>
                         <div id="skill-container">
                             <div class="skills-box">
-                                <p class="descriptionText">Programação em C</p>
+                                <p class="descriptionText" id="hard1">Programação em C</p>
                             </div>
                             <div class="skills-box">
-                                <p class="descriptionText">Programação em C# (Unity)</p>
-                            </div>
-                        </div>
-                        <div id="skill-container">
-                            <div class="skills-box">
-                                <p class="descriptionText">Programação em JAVA</p>
-                            </div>
-                            <div class="skills-box">
-                                <p class="descriptionText">Programação em Python</p>
+                                <p class="descriptionText" id="hard2">Programação em C# (Unity)</p>
                             </div>
                         </div>
                         <div id="skill-container">
                             <div class="skills-box">
-                                <p class="descriptionText">HTML, CSS & javaScript</p>
+                                <p class="descriptionText" id="hard3">Programação em JAVA</p>
                             </div>
                             <div class="skills-box">
-                                <p class="descriptionText">MySQL</p>
+                                <p class="descriptionText" id="hard4">Programação em Python</p>
                             </div>
                         </div>
                         <div id="skill-container">
                             <div class="skills-box">
-                                <p class="descriptionText">FlutterFlow Framework</p>
+                                <p class="descriptionText" id="hard5">HTML, CSS & javaScript</p>
+                            </div>
+                            <div class="skills-box">
+                                <p class="descriptionText" id="hard6">MySQL</p>
+                            </div>
+                        </div>
+                        <div id="skill-container">
+                            <div class="skills-box">
+                                <p class="descriptionText" id="hard7">FlutterFlow Framework</p>
                             </div>
                         </div>
                     </div>
@@ -269,31 +275,31 @@
                         </div>
                         <div id="skill-container">
                             <div class="skills-box">
-                                <p class="descriptionText">Trabalho em equipe</p>
+                                <p class="descriptionText" id="soft1">Trabalho em equipe</p>
                             </div>
                             <div class="skills-box">
-                                <p class="descriptionText">Inglês intermediário</p>
-                            </div>
-                        </div>
-                        <div id="skill-container">
-                            <div class="skills-box">
-                                <p class="descriptionText">Comunicação</p>
-                            </div>
-                            <div class="skills-box">
-                                <p class="descriptionText">Raciocínio lógico</p>
+                                <p class="descriptionText" id="soft2">Inglês intermediário</p>
                             </div>
                         </div>
                         <div id="skill-container">
                             <div class="skills-box">
-                                <p class="descriptionText">Resolução de problemas</p>
+                                <p class="descriptionText" id="soft3">Comunicação</p>
                             </div>
                             <div class="skills-box">
-                                <p class="descriptionText">Aprendizagem rápida</p>
+                                <p class="descriptionText" id="soft4">Raciocínio lógico</p>
                             </div>
                         </div>
                         <div id="skill-container">
                             <div class="skills-box">
-                                <p class="descriptionText">Proatividade</p>
+                                <p class="descriptionText" id="soft5">Resolução de problemas</p>
+                            </div>
+                            <div class="skills-box">
+                                <p class="descriptionText" id="soft6">Aprendizagem rápida</p>
+                            </div>
+                        </div>
+                        <div id="skill-container">
+                            <div class="skills-box">
+                                <p class="descriptionText" id="soft7">Proatividade</p>
                             </div>
                         </div>
                     </div>
@@ -302,7 +308,7 @@
             <!--contato-->
             <section id="contact-section">
                 <div class="sectionHeader">
-                    <h2 class="sectionTitle">Contato</h2>
+                    <h2 class="sectionTitle" id="contact-title">Contato</h2>
                 </div>
                 <div class="pageContent">
                     <div class="sectionContent", id="contact">
@@ -347,10 +353,10 @@
                             </a>
                         </div>
                     </div>
-                    <div class="sectionContent", id="curriculum">
-                        <p class="descriptionText">Me ajude a sustentar meus filhos!</p>
+                    <div class="sectionContent" id="curriculum">
+                        <p class="descriptionText" id="curriculum-help">Me ajude a sustentar meus filhos!</p>
                         <img src="./imagens/medogs.jpeg" alt="babies">
-                        <p class="descriptionText">Baixe meu currículo:</p>
+                        <p class="descriptionText" id="curriculum-download">Baixe meu currículo:</p>
                             <div class="list-item">
                                 <button class="botao descriptionText" onclick="baixarPDF()">PDF</button>
                                 <button class="botao descriptionText" onclick="baixarDOCX()">DOCX</button>
@@ -362,19 +368,20 @@
         <footer>
             <div class="sectionContent">
                 <p class="sectionTitle">Vitória Nazareth</p>
-                <p class="descriptionText">Copyright &copy; 2025, Vitória Nazareth. Feito a base de café e Reneé Rapp. 
+                <p class="descriptionText" id="copyright-text">Copyright &copy; 2025, Vitória Nazareth. Feito a base de café e Reneé Rapp. 
                 Todos os direitos reservados</p>
             </div>
             <div class="pageContent">
-                <a href="#main-section" class="descriptionText">Início</a>
-                <a href="#objective-section" class="descriptionText">Sobre mim</a>
-                <a href="#education-section" class="descriptionText">Educação</a>
-                <a href="#experience-section" class="descriptionText">Experiência profissional</a>
-                <a href="#skills-section" class="descriptionText">Cursos & competências</a>
+                <a href="#main-section" class="descriptionText" id="start-tag">Início</a>
+                <a href="#objective-section" class="descriptionText" id="about-tag">Sobre mim</a>
+                <a href="#education-section" class="descriptionText" id="education-tag">Educação</a>
+                <a href="#experience-section" class="descriptionText" id="experience-tag">Experiência profissional</a>
+                <a href="#skills-section" class="descriptionText" id="skills-tag">Cursos & competências</a>
             </div>
         </footer>
-        <script src="script.js" defer></script>
-        <script src="download.js" defer></script>
-        <script src="modes.js" defer></script>
+        <script src="./scripts/script.js" defer></script>
+        <script src="./scripts/download.js" defer></script>
+        <script src="./scripts/modes.js" defer></script>
+        <script src="./scripts/languages.js" defer></script>
     </body>
 </html>
